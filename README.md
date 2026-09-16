@@ -1,0 +1,2 @@
+# Specialty_Outdoor_Camping_Gear_Shop
+Automated website repository for Specialty_Outdoor_Camping_Gear_Shop
