@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Trailforge | Outdoor Gear</title>
+  <meta name="description" content="Get in touch with Trailforge for gear advice, product questions, and rental enquiries.">
+  <meta property="og:title" content="Contact Trailforge | Outdoor Gear">
+  <meta property="og:description" content="Planning your next adventure? Tell us where you are headed.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="Trailforge Home">
+        <svg class="brand-logo-icon" viewBox="0 0 100 100" fill="none"><path d="M20 75L50 25L80 75H20Z" stroke="#D96B32" stroke-width="6"/><path d="M35 75L50 50L65 75H35Z" fill="#E7DDCA" opacity="0.3"/><circle cx="50" cy="50" r="40" stroke="#E7DDCA" stroke-width="3" stroke-dasharray="4 4" opacity="0.4"/><path d="M50 10V20M50 80V90M10 50H20M80 50H90" stroke="#D96B32" stroke-width="3"/></svg>
+        <div><span class="brand-title">TRAILFORGE</span><span class="brand-desc">OUTDOOR GEAR</span></div>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="guides.html" class="nav-link">Buying Guides</a>
+        <a href="rental.html" class="nav-link">Gear Rental</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn search-toggle-btn desktop-only-action">🔍</button>
+        <button class="icon-btn theme-toggle-btn desktop-only-action">🌙</button>
+        <button class="icon-btn rtl-toggle-btn desktop-only-action">RTL</button>
+        <button class="btn btn-primary btn-sm desktop-only-action open-enquiry-btn">ENQUIRE ABOUT GEAR →</button>
+        <button class="hamburger-btn" id="hamburger-btn"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div>
+        <div class="drawer-header">
+          <a href="index.html" class="brand-logo" aria-label="Trailforge Home">
+            <svg class="brand-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 75L50 25L80 75H20Z" stroke="#D96B32" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M35 75L50 50L65 75H35Z" fill="#E7DDCA" opacity="0.3"/>
+              <circle cx="50" cy="50" r="40" stroke="#E7DDCA" stroke-width="3" stroke-dasharray="4 4" opacity="0.4"/>
+              <path d="M50 10V20M50 80V90M10 50H20M80 50H90" stroke="#D96B32" stroke-width="3"/>
+            </svg>
+            <div>
+              <span class="brand-title">TRAILFORGE</span>
+              <span class="brand-desc">OUTDOOR GEAR</span>
+            </div>
+          </a>
+          <button class="modal-close-btn" id="drawer-close-btn">✕</button>
+        </div>
+        <nav class="drawer-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="home-2.html" class="nav-link">Home 2</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="products.html" class="nav-link">Products</a>
+          <a href="guides.html" class="nav-link">Buying Guides</a>
+          <a href="rental.html" class="nav-link">Gear Rental</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+      </div>
+      <div class="drawer-controls">
+        <div class="drawer-icon-actions">
+          <button class="icon-btn search-toggle-btn" aria-label="Open Search">🔍</button>
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Light Dark Theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button class="icon-btn rtl-toggle-btn" aria-label="Toggle LTR RTL">
+            <span class="rtl-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+          </button>
+        </div>
+        <button class="btn btn-primary open-enquiry-btn" style="width:100%;">ENQUIRE ABOUT GEAR →</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         CONTACT — SECTION 01 — HERO
+         ========================================================================== -->
+    <section class="hero-sec" style="height: 260px; min-height: 260px; display: flex; align-items: center; justify-content: center; padding: 0;">
+      <img src="assets/images/44.png" alt="Wilderness camp contact hero" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content scroll-reveal" style="text-align:center; margin-inline:auto; padding:0;">
+        <span class="badge" style="margin-bottom:8px;">HEADQUARTERS & SUPPORT</span>
+        <h1 class="hero-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom:8px; line-height:1.1;">GET IN TOUCH WITH US</h1>
+        <p class="hero-lead" style="margin-inline:auto; margin-bottom:0; font-size: clamp(0.95rem, 1.5vw, 1.1rem); max-width:620px;">Have questions about technical gear or rentals? Our team is here to help.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT — SECTION 02 — ADDRESS DETAILS, SOCIALS & SEND MESSAGE FORM
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-2xl); align-items:start;" class="scroll-reveal">
+          
+          <!-- LEFT COLUMN: Contact Address & Details + Interactive Social Icons -->
+          <div style="display:flex; flex-direction:column; gap: var(--space-md);">
+            <div style="text-align:center;">
+              <span class="badge" style="margin-bottom:10px; display:inline-block;">VISIT &amp; CALL US</span>
+              <h2 class="section-title" style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 8px;">HEADQUARTERS &amp; DIRECT CONTACT</h2>
+              <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.5; margin:0 auto; max-width:480px;">
+                Whether you're gearing up for a multi-day alpine trek or need advice on tent weatherproofing, our field team is standing by.
+              </p>
+            </div>
+
+            <!-- Address Card -->
+            <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:20px; border-radius:8px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px; box-shadow:var(--shadow-sm);">
+              <div style="width:48px; height:48px; border-radius:50%; background:rgba(217,107,50,0.15); border:1px solid var(--color-signal-orange); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D96B32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.05rem; margin-bottom:4px; font-family:var(--font-heading); color:var(--text-primary); text-transform:uppercase; letter-spacing:0.04em;">HEADQUARTERS &amp; STORE LOCATION</h3>
+                <p style="color:var(--text-secondary); margin:0; line-height:1.4; font-size:0.9rem;">
+                  1482 Alpine Ridgeline Drive, Suite 200, Summit Valley, OR 97401
+                </p>
+              </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:20px; border-radius:8px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px; box-shadow:var(--shadow-sm);">
+              <div style="width:48px; height:48px; border-radius:50%; background:rgba(217,107,50,0.15); border:1px solid var(--color-signal-orange); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D96B32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.05rem; margin-bottom:4px; font-family:var(--font-heading); color:var(--text-primary); text-transform:uppercase; letter-spacing:0.04em;">DIRECT PHONE SUPPORT</h3>
+                <p style="color:var(--color-signal-orange); font-weight:600; margin:0; font-size:0.95rem;">+1 (800) 555-TRAIL / +1 (503) 892-4410</p>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:20px; border-radius:8px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px; box-shadow:var(--shadow-sm);">
+              <div style="width:48px; height:48px; border-radius:50%; background:rgba(217,107,50,0.15); border:1px solid var(--color-signal-orange); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D96B32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.05rem; margin-bottom:4px; font-family:var(--font-heading); color:var(--text-primary); text-transform:uppercase; letter-spacing:0.04em;">EMAIL SUPPORT</h3>
+                <p style="color:var(--color-signal-orange); font-weight:600; margin:0; font-size:0.95rem;">expeditions@trailforgegear.com</p>
+              </div>
+            </div>
+
+            <!-- Showroom Hours Card -->
+            <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:20px; border-radius:8px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px; box-shadow:var(--shadow-sm);">
+              <div style="width:48px; height:48px; border-radius:50%; background:rgba(217,107,50,0.15); border:1px solid var(--color-signal-orange); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D96B32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.05rem; margin-bottom:4px; font-family:var(--font-heading); color:var(--text-primary); text-transform:uppercase; letter-spacing:0.04em;">SHOWROOM HOURS</h3>
+                <p style="color:var(--text-secondary); margin:0; font-size:0.9rem;">Mon – Sat: 8:00 AM – 7:00 PM | Sun: 10:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+
+            <!-- Social Media Icons with Explicit Fill Colors -->
+            <div style="margin-top:8px; text-align:center;">
+              <h4 style="font-family:var(--font-heading); font-size:1.05rem; letter-spacing:0.05em; margin-bottom:12px; color:var(--text-primary); text-transform:uppercase;">CONNECT ON SOCIALS</h4>
+              <div style="display:flex; gap:14px; align-items:center; justify-content:center;">
+                <a href="#" class="contact-social-btn" aria-label="Instagram" style="width:44px; height:44px; border-radius:50%; background:rgba(231,221,202,0.08); border:1px solid var(--color-signal-orange); display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="width:20px; height:20px; fill:#D96B32; display:block;"><path fill="#D96B32" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="#" class="contact-social-btn" aria-label="YouTube" style="width:44px; height:44px; border-radius:50%; background:rgba(231,221,202,0.08); border:1px solid var(--color-signal-orange); display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="width:20px; height:20px; fill:#D96B32; display:block;"><path fill="#D96B32" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="#" class="contact-social-btn" aria-label="Facebook" style="width:44px; height:44px; border-radius:50%; background:rgba(231,221,202,0.08); border:1px solid var(--color-signal-orange); display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="width:20px; height:20px; fill:#D96B32; display:block;"><path fill="#D96B32" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" class="contact-social-btn" aria-label="X (Twitter)" style="width:44px; height:44px; border-radius:50%; background:rgba(231,221,202,0.08); border:1px solid var(--color-signal-orange); display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="width:20px; height:20px; fill:#D96B32; display:block;"><path fill="#D96B32" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" class="contact-social-btn" aria-label="Strava Trails" style="width:44px; height:44px; border-radius:50%; background:rgba(231,221,202,0.08); border:1px solid var(--color-signal-orange); display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="width:20px; height:20px; fill:#D96B32; display:block;"><path fill="#D96B32" d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7.92 15.598h4.173"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Send Message Contact Form -->
+          <div style="background:var(--bg-surface); padding:clamp(20px, 4vw, 36px); border:1px solid var(--border-color); border-top:4px solid var(--color-signal-orange); border-radius:12px; box-shadow:var(--shadow-md);">
+            <div style="margin-bottom:20px; text-align:center;">
+              <span class="badge" style="margin-bottom:8px; display:inline-block;">DIRECT MESSAGE</span>
+              <h3 style="font-size:1.8rem; font-family:var(--font-heading); margin-bottom:6px; text-align:center;">SEND US A MESSAGE</h3>
+              <p style="color:var(--text-secondary); font-size:0.95rem; margin:0 auto; max-width:420px; text-align:center;">Fill out the form below and an outdoor specialist will respond within 24 hours.</p>
+            </div>
+
+            <div id="contact-form-success" style="display:none; background: rgba(217,107,50,0.12); border:1px solid var(--color-signal-orange); padding:16px; border-radius:4px; margin-bottom:20px;">
+              <h4 style="color:var(--color-signal-orange); margin:0 0 4px; font-size:1.1rem;">Message Sent Successfully!</h4>
+              <p style="margin:0; font-size:0.9rem; color:var(--text-secondary);">Thank you for reaching out. A Trailforge specialist will follow up with you shortly.</p>
+            </div>
+
+            <form id="contact-main-form" onsubmit="event.preventDefault(); document.getElementById('contact-form-success').style.display='block'; this.reset();">
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin-bottom:16px;">
+                <div class="form-group" style="margin:0;">
+                  <label class="form-label" for="contact-name">Your Full Name *</label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Rivera" required>
+                </div>
+                <div class="form-group" style="margin:0;">
+                  <label class="form-label" for="contact-email">Email Address *</label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="alex@adventure.com" required>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin-bottom:16px;">
+                <div class="form-group" style="margin:0;">
+                  <label class="form-label" for="contact-phone">Phone Number (Optional)</label>
+                  <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="form-group" style="margin:0;">
+                  <label class="form-label" for="contact-topic">Inquiry Topic *</label>
+                  <select id="contact-topic" class="form-control" required>
+                    <option value="">Select a Topic</option>
+                    <option value="Gear Recommendation">Gear Recommendation & Advice</option>
+                    <option value="Rental Reservations">Gear Rental Program</option>
+                    <option value="Product Availability">Product Sizing & Inventory</option>
+                    <option value="Warranty & Repair">Warranty & Repair Request</option>
+                    <option value="General Question">General Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:20px;">
+                <label class="form-label" for="contact-message">Your Message *</label>
+                <textarea id="contact-message" class="form-control" rows="5" placeholder="Tell us about your trip details, target gear, or questions..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">SEND MESSAGE →</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT — SECTION 03 — FULL COLOR GOOGLE MAP (NO GREYSCALE)
+         ========================================================================== -->
+    <section class="section" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color); padding-bottom:0;">
+      <div class="container" style="margin-bottom: var(--space-xl);">
+        <div class="section-header scroll-reveal" style="text-align:center;">
+          <span class="badge">FIND OUR FLAGSHIP STORE</span>
+          <h2 class="section-title">STORE LOCATION & TRAILHEAD HUB</h2>
+          <p class="section-subtitle">Drop by our Summit Valley showroom for hands-on gear fitting, tent demos, and equipment rentals.</p>
+        </div>
+      </div>
+
+      <!-- FULL WIDTH COLOR GOOGLE MAP (NO GREYSCALE FILTER) -->
+      <div class="map-container scroll-reveal" style="width:100%; height:450px; border-top:1px solid var(--border-color); position:relative; overflow:hidden;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11624.4754701235!2d-121.3153!3d44.0582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54b8c0ffa5d3d3a7%3A0x8898126e2e505298!2sBend%2C%20OR!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+          width="100%" 
+          height="100%" 
+          style="border:0; filter:none !important; opacity:1 !important; display:block;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade" 
+          title="Trailforge Store Google Map Location">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Trailforge Home" style="margin-bottom: 16px; display: inline-flex;">
+            <svg class="brand-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 75L50 25L80 75H20Z" stroke="#D96B32" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M35 75L50 50L65 75H35Z" fill="#E7DDCA" opacity="0.3"/>
+              <circle cx="50" cy="50" r="40" stroke="#E7DDCA" stroke-width="3" stroke-dasharray="4 4" opacity="0.4"/>
+              <path d="M50 10V20M50 80V90M10 50H20M80 50H90" stroke="#D96B32" stroke-width="3"/>
+            </svg>
+            <div>
+              <span class="brand-title">TRAILFORGE</span>
+              <span class="brand-desc">OUTDOOR GEAR</span>
+            </div>
+          </a>
+          <p style="font-size:0.95rem; color:rgba(231,221,202,0.7);">Specialty outdoor and camping gear.</p>
+
+          <!-- Social Links with Hover Effects -->
+          <div class="footer-socials" aria-label="Social Media Links">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Strava Trails">
+              <svg viewBox="0 0 24 24"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7.92 15.598h4.173"/></svg>
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="home-2.html">Home 2 (Split View)</a>
+            <a href="about.html">About Trailforge</a>
+            <a href="products.html">Product Catalogue</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Adventure Links -->
+        <div>
+          <h4 class="footer-col-title">ADVENTURE</h4>
+          <div class="footer-links">
+            <a href="guides.html">Buying Guides</a>
+            <a href="rental.html">Gear Rental Program</a>
+            <a href="contact.html">Contact Headquarters</a>
+            <a href="#" class="open-enquiry-btn">Custom Loadouts</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Support Links -->
+        <div>
+          <h4 class="footer-col-title">SUPPORT</h4>
+          <div class="footer-links">
+            <a href="#" class="open-enquiry-btn">Gear Assistance</a>
+            <a href="rental.html">Rental Reservation</a>
+            <a href="guides.html">Camping Checklists</a>
+            <a href="contact.html">Store Location</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Field Notes Newsletter -->
+        <div>
+          <h4 class="footer-col-title">FIELD NOTES</h4>
+          <p style="font-size:0.9rem; color:rgba(231,221,202,0.7); margin-bottom:12px; line-height:1.4;">
+            Subscribe for gear maintenance tips, trail updates, and seasonal pack lists.
+          </p>
+          <div class="newsletter-box">
+            <div class="newsletter-input-wrap">
+              <input type="email" placeholder="Enter your email" class="newsletter-input" aria-label="Email Address">
+              <button class="btn btn-primary btn-sm" onclick="alert('Subscribed to Trailforge Field Notes!');">JOIN →</button>
+            </div>
+            <em style="font-size:0.75rem; color:rgba(231,221,202,0.45); display:block;">No spam. Unsubscribe anytime.</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Trailforge Outdoor Gear. All rights reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Trail</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GLOBAL ENQUIRY POPUP MODAL -->
+  <div class="modal-overlay" id="enquiry-modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close-btn" id="enquiry-close-btn" aria-label="Close Modal">✕</button>
+      
+      <div id="enquiry-form-container">
+        <span class="badge" style="margin-bottom:4px;">TRAILFORGE ASSISTANCE</span>
+        <h2 style="font-size:1.75rem; margin-bottom:12px;">LET'S TALK GEAR</h2>
+        
+        <div id="enquiry-success" style="display:none; background: var(--accent-alpha); border:1px solid var(--color-signal-orange); padding: 14px; text-align:center; margin-bottom:12px;">
+          <h3 style="color:var(--color-signal-orange); font-size:1.4rem; margin-bottom:4px;">ENQUIRY RECEIVED</h3>
+          <p style="margin:0; font-size:0.9rem;">Thanks — your enquiry has been prepared for the Trailforge team.</p>
+        </div>
+
+        <form id="enquiry-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-name">Full Name *</label>
+              <input type="text" id="enquiry-name" class="form-control" required placeholder="Alex Mercer">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-email">Email Address *</label>
+              <input type="email" id="enquiry-email" class="form-control" required placeholder="alex@example.com">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-phone">Phone Number</label>
+              <input type="tel" id="enquiry-phone" class="form-control" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-type">Enquiry Type</label>
+              <select id="enquiry-type" class="form-control">
+                <option value="Product Question">Product Question</option>
+                <option value="Gear Recommendation">Gear Recommendation</option>
+                <option value="Rental Enquiry">Rental Enquiry</option>
+                <option value="Buying Guide Help">Buying Guide Help</option>
+                <option value="General Enquiry">General Enquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-product">Product / Gear Selected</label>
+              <input type="text" id="enquiry-product" class="form-control" placeholder="Specific gear or leave blank">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-date">Preferred Trip Date</label>
+              <input type="date" id="enquiry-date" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-trip">Trip Type</label>
+              <select id="enquiry-trip" class="form-control">
+                <option value="Weekend Camping">Weekend Camping</option>
+                <option value="Backpacking">Backpacking</option>
+                <option value="Hiking">Hiking</option>
+                <option value="Family Camping">Family Camping</option>
+                <option value="Road Trip">Road Trip</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-people">Number of People</label>
+              <select id="enquiry-people" class="form-control">
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3-4">3–4 People</option>
+                <option value="5+">5+ People</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="enquiry-message">Message *</label>
+            <textarea id="enquiry-message" class="form-control" rows="2" required placeholder="Tell us about your upcoming trip or gear questions..."></textarea>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn btn-outline" onclick="document.getElementById('enquiry-modal').classList.remove('open');">Maybe Later</button>
+            <button type="submit" class="btn btn-primary">SEND ENQUIRY →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="search-modal" aria-hidden="true">
+    <div class="modal-panel" style="max-width: 600px;">
+      <button class="modal-close-btn" id="search-close-btn">✕</button>
+      <h3 style="font-size:1.8rem; margin-bottom:16px;">FIND GEAR OR INFORMATION</h3>
+      <input type="text" id="search-input" class="form-control" placeholder="Search products or guides...">
+      <div id="search-results" style="margin-top: 16px;"><p class="text-muted">Type to search...</p></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

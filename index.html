@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trailforge | Specialty Outdoor & Camping Gear</title>
+  <meta name="description" content="Purpose-built specialty outdoor, camping, and backpacking gear engineered for weekends in the wild and long trail days. Explore tents, packs, cookware, and sleeping systems.">
+  <meta property="og:title" content="Trailforge | Specialty Outdoor & Camping Gear">
+  <meta property="og:description" content="Purpose-built specialty outdoor gear for the places that call you outside.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & STICKY NAVBAR
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <!-- Left: Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Trailforge Home">
+        <svg class="brand-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 75L50 25L80 75H20Z" stroke="#D96B32" stroke-width="6" stroke-linejoin="round"/>
+          <path d="M35 75L50 50L65 75H35Z" fill="#E7DDCA" opacity="0.3"/>
+          <circle cx="50" cy="50" r="40" stroke="#E7DDCA" stroke-width="3" stroke-dasharray="4 4" opacity="0.4"/>
+          <path d="M50 10V20M50 80V90M10 50H20M80 50H90" stroke="#D96B32" stroke-width="3"/>
+        </svg>
+        <div>
+          <span class="brand-title">TRAILFORGE</span>
+          <span class="brand-desc">OUTDOOR GEAR</span>
+        </div>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="guides.html" class="nav-link">Buying Guides</a>
+        <a href="rental.html" class="nav-link">Gear Rental</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right: Actions -->
+      <div class="nav-actions">
+        <button class="icon-btn search-toggle-btn desktop-only-action" aria-label="Open Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+
+        <button class="icon-btn theme-toggle-btn desktop-only-action" aria-label="Toggle Light Dark Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <button class="icon-btn rtl-toggle-btn desktop-only-action" aria-label="Toggle LTR RTL">
+          <span class="rtl-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm desktop-only-action open-enquiry-btn">
+          ENQUIRE ABOUT GEAR →
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Mobile Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div>
+        <div class="drawer-header">
+          <a href="index.html" class="brand-logo" aria-label="Trailforge Home">
+            <svg class="brand-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 75L50 25L80 75H20Z" stroke="#D96B32" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M35 75L50 50L65 75H35Z" fill="#E7DDCA" opacity="0.3"/>
+              <circle cx="50" cy="50" r="40" stroke="#E7DDCA" stroke-width="3" stroke-dasharray="4 4" opacity="0.4"/>
+              <path d="M50 10V20M50 80V90M10 50H20M80 50H90" stroke="#D96B32" stroke-width="3"/>
+            </svg>
+            <div>
+              <span class="brand-title">TRAILFORGE</span>
+              <span class="brand-desc">OUTDOOR GEAR</span>
+            </div>
+          </a>
+          <button class="modal-close-btn" id="drawer-close-btn" aria-label="Close Mobile Drawer">✕</button>
+        </div>
+
+        <nav class="drawer-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="home-2.html" class="nav-link">Home 2</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="products.html" class="nav-link">Products</a>
+          <a href="guides.html" class="nav-link">Buying Guides</a>
+          <a href="rental.html" class="nav-link">Gear Rental</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+
+      <div class="drawer-controls">
+        <div class="drawer-icon-actions">
+          <button class="icon-btn search-toggle-btn" aria-label="Open Search">🔍</button>
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Light Dark Theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button class="icon-btn rtl-toggle-btn" aria-label="Toggle LTR RTL">
+            <span class="rtl-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+          </button>
+        </div>
+        <button class="btn btn-primary open-enquiry-btn" style="width:100%;">ENQUIRE ABOUT GEAR →</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HOME — SECTION 01 — HERO
+         ========================================================================== -->
+    <section class="hero-sec">
+      <img src="assets/images/1.png" alt="High mountain campsite overview at sunrise" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content scroll-reveal">
+        <span class="badge" style="margin-bottom: 16px;">ENGINEERED OUTDOOR EQUIPMENT</span>
+        <h1 class="hero-title">GEAR FOR THE PLACES THAT CALL YOU OUTSIDE.</h1>
+        <p class="hero-lead">Purpose-built camping and outdoor essentials for weekends in the wild, long trail days and everything between.</p>
+        <div class="hero-buttons">
+          <a href="products.html" class="btn btn-primary">EXPLORE THE GEAR →</a>
+          <a href="guides.html" class="btn btn-outline-dark">READ BUYING GUIDES</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOME — SECTION 02 — SEASONAL GEAR
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge">CURATED PACK LISTS</span>
+          <h2 class="section-title">THIS SEASON, PACK SMARTER.</h2>
+          <p class="section-subtitle">Gear systems specifically arranged for spring trail shifts, summer lakesides, and cold high-altitude routes.</p>
+        </div>
+
+        <div class="seasonal-grid">
+          <!-- Card 1: Spring Trails -->
+          <div class="seasonal-card scroll-reveal">
+            <div>
+              <span class="badge" style="margin-bottom:12px;">EARLY SEASON</span>
+              <h3 class="seasonal-title">SPRING TRAILS</h3>
+              <p>Lightweight weather protection and breathable insulation for variable trail conditions.</p>
+              <ul class="seasonal-list">
+                <li>Lightweight weather layers</li>
+                <li>Compact 3-season shelter</li>
+                <li>Hydration & filtration systems</li>
+              </ul>
+            </div>
+            <a href="products.html" class="btn btn-outline" style="margin-top:24px;">EXPLORE SPRING GEAR →</a>
+          </div>
+
+          <!-- Card 2: Summer Camps (Featured Dark Surface) -->
+          <div class="seasonal-card featured scroll-reveal">
+            <div>
+              <span class="badge badge-dark" style="margin-bottom:12px;">POPULAR SEASON</span>
+              <h3 class="seasonal-title">SUMMER CAMPS</h3>
+              <p>High ventilation shelters, camp kitchen setups, and sun defense.</p>
+              <ul class="seasonal-list">
+                <li>Ventilated mesh tents</li>
+                <li>Compact camp cookware</li>
+                <li>Solar & UV protection gear</li>
+              </ul>
+            </div>
+            <a href="products.html" class="btn btn-primary" style="margin-top:24px;">EXPLORE SUMMER GEAR →</a>
+          </div>
+
+          <!-- Card 3: Cold-Weather Escapes (Full width under) -->
+          <div class="seasonal-card scroll-reveal" style="grid-column: 1 / -1; background-color: var(--bg-secondary);">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+              <div>
+                <span class="badge" style="margin-bottom:12px;">EXPEDITION READY</span>
+                <h3 class="seasonal-title">COLD-WEATHER ESCAPES</h3>
+                <p style="max-width: 600px;">Insulated sleeping bags, 4-season geodesic shelters, and rugged cookware built for sub-zero mornings.</p>
+              </div>
+              <a href="products.html" class="btn btn-outline">EXPLORE COLD GEAR →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOME — SECTION 03 — GEAR CATEGORIES NAVIGATOR
+         ========================================================================== -->
+    <section class="category-nav-sec">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge">EQUIPMENT CATEGORIES</span>
+          <h2 class="section-title">EXPLORE BY CATEGORY.</h2>
+          <p class="section-subtitle">Select a category to view high-performance equipment specifications and field use cases.</p>
+        </div>
+
+        <div class="cat-navigator scroll-reveal">
+          <div class="cat-menu">
+            <button class="cat-menu-item active" data-cat-key="tents">TENTS & SHELTER</button>
+            <button class="cat-menu-item" data-cat-key="backpacks">BACKPACKS</button>
+            <button class="cat-menu-item" data-cat-key="sleeping">SLEEPING GEAR</button>
+            <button class="cat-menu-item" data-cat-key="cookware">CAMP COOKWARE</button>
+            <button class="cat-menu-item" data-cat-key="apparel">OUTDOOR APPAREL</button>
+            <button class="cat-menu-item" data-cat-key="lighting">TRAIL LIGHTING</button>
+          </div>
+
+          <div class="cat-preview-box">
+            <img src="assets/images/2.png" alt="Tent category preview" class="cat-preview-img" id="cat-preview-img">
+            <div class="cat-preview-content">
+              <h3 id="cat-preview-title">Tents &amp; Shelter</h3>
+              <p id="cat-preview-desc">Storm-tested 2-person and family expedition shelters built for high wind resistance.</p>
+              <a href="products.html" class="btn btn-primary btn-sm" id="cat-preview-link">VIEW PRODUCTS IN CATEGORY →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOME — SECTION 04 — FIELD TESTED STORY
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="field-tested-grid">
+          <div class="scroll-reveal">
+            <img src="assets/images/3.png" alt="Camper preparing gear in mountain campsite" style="width:100%; border-radius:2px; box-shadow: var(--shadow-lg);">
+          </div>
+          <div class="scroll-reveal">
+            <span class="badge">FIELD TESTED DESIGN</span>
+            <h2 class="section-title" style="margin-block: 12px;">BUILT FOR THE WEATHER YOU DIDN'T PLAN FOR.</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+              True outdoor reliability is measured when cold fronts arrive early, rain saturates your pack cover, and the trail turns to rock. Every piece of equipment at Trailforge is selected for durability, field repairability, and practical function.
+            </p>
+            
+            <div class="tech-spec-table">
+              <div class="tech-spec-item">
+                <label>AVERAGE PACK WEIGHT</label>
+                <span>ULTRALIGHT 1.8 KG</span>
+              </div>
+              <div class="tech-spec-item">
+                <label>PACK SIZE</label>
+                <span>COMPACT 15L STOW</span>
+              </div>
+              <div class="tech-spec-item">
+                <label>SHELL MATERIAL</label>
+                <span>40D RIPSTOP NYLON</span>
+              </div>
+              <div class="tech-spec-item">
+                <label>PRIMARY USE</label>
+                <span>3-4 SEASON ADVENTURE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOME — SECTION 05 — BUYING GUIDE PREVIEW
+         ========================================================================== -->
+    <section class="section" style="background-color: var(--bg-surface); border-block: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge">EDITORIAL GUIDANCE</span>
+          <h2 class="section-title">KNOW YOUR GEAR BEFORE YOU LEAVE THE TRAILHEAD.</h2>
+          <p class="section-subtitle">Practical advice on gear selection, load packing, and mountain shelter preparation.</p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card scroll-reveal">
+            <img src="assets/images/4.png" alt="First camping trip guide" style="height: 200px; object-fit: cover;">
+            <div class="product-info">
+              <span class="badge" style="width:fit-content; margin-bottom:8px;">BEGINNER GUIDE</span>
+              <h3 style="font-size: 1.5rem; margin-bottom:8px;">First Camping Trip Essentials</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">Everything you need for your first night under canvas without carrying unnecessary weight.</p>
+              <a href="guides.html" class="btn btn-outline btn-sm" style="margin-top: 16px;">READ GUIDE →</a>
+            </div>
+          </div>
+
+          <div class="product-card scroll-reveal">
+            <img src="assets/images/5.png" alt="Backpack sizing guide" style="height: 200px; object-fit: cover;">
+            <div class="product-info">
+              <span class="badge" style="width:fit-content; margin-bottom:8px;">FIT & SIZING</span>
+              <h3 style="font-size: 1.5rem; margin-bottom:8px;">Choosing Backpack Capacity</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">How to select between 30L, 50L, and 70L internal frame packs based on trip length.</p>
+              <a href="guides.html" class="btn btn-outline btn-sm" style="margin-top: 16px;">READ GUIDE →</a>
+            </div>
+          </div>
+
+          <div class="product-card scroll-reveal">
+            <img src="assets/images/6.png" alt="Tent weather guide" style="height: 200px; object-fit: cover;">
+            <div class="product-info">
+              <span class="badge" style="width:fit-content; margin-bottom:8px;">SHELTER ADVICE</span>
+              <h3 style="font-size: 1.5rem; margin-bottom:8px;">Tent Size & Wind Ratings</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">Understanding hydrostatic head waterproofing ratings, vestibule space, and pole geometry.</p>
+              <a href="guides.html" class="btn btn-outline btn-sm" style="margin-top: 16px;">READ GUIDE →</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-xl);" class="scroll-reveal">
+          <a href="guides.html" class="btn btn-primary">EXPLORE ALL BUYING GUIDES →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOME — SECTION 05 — LAB TESTING & SUSTAINABLE MATERIAL INSPECTOR
+         ========================================================================== -->
+    <section class="sec-lab-showcase scroll-reveal">
+      <div class="container">
+        <div class="lab-showcase-grid">
+          <!-- Left Column: Content -->
+          <div class="lab-showcase-left">
+            <span class="badge-orange">RIGOROUS FIELD & LAB STANDARDS</span>
+            <h2 class="lab-showcase-title">ENGINEERED FOR THE UNPREDICTABLE.</h2>
+            <p class="lab-showcase-desc">
+              Every tent, pack, and sleeping bag undergoes 500+ hours of hydro-pressure stress tests and arctic wind chamber simulations before earning the Trailforge stamp.
+            </p>
+
+            <div class="lab-spec-cards">
+              <div class="lab-spec-card">
+                <strong class="lab-spec-title">40D RIPSTOP NYLON</strong>
+                <span class="lab-spec-text">Reinforced grid weave prevents tear propagation on rough granite.</span>
+              </div>
+              <div class="lab-spec-card">
+                <strong class="lab-spec-title">PFC-FREE DWR COATING</strong>
+                <span class="lab-spec-text">Eco-friendly hydrophobic barrier sheds heavy snow and rainfall.</span>
+              </div>
+              <div class="lab-spec-card">
+                <strong class="lab-spec-title">GRADE-1 TITANIUM</strong>
+                <span class="lab-spec-text">Ultralight cookware metal with zero toxic chemical leaching.</span>
+              </div>
+              <div class="lab-spec-card">
+                <strong class="lab-spec-title">800-FILL DOWN</strong>
+                <span class="lab-spec-text">Ethically sourced thermal insulation with maximum warmth-to-weight ratio.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Featured Image with Badge -->
+          <div class="lab-showcase-right">
+            <div class="lab-img-frame">
+              <img src="assets/images/7.png" alt="Trailforge Outdoor Gear Stress Testing Laboratory" class="lab-main-img">
+              <div class="radar-target" title="Rainfall & Hydro-Pressure Sensor"></div>
+              <div class="lab-badge-float">
+                <span style="font-size: 1.5rem;">🔬</span>
+                <div>
+                  <strong class="lab-float-title">HYDRO-TEST PASSED</strong>
+                  <span class="lab-float-sub">10,000mm Rain Chamber Proofed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOME — SECTION 06 — FINAL CTA (ABOVE FOOTER)
+         ========================================================================== -->
+    <section class="section" style="position:relative; background-color: var(--color-forest-black); color: var(--color-trail-sand); overflow:hidden; padding-block: var(--space-3xl);">
+      <img src="assets/images/8.png" alt="Mountain valley background" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.35; filter:brightness(0.5);">
+      <div class="container scroll-reveal" style="position:relative; z-index:5; text-align:center;">
+        <span class="badge badge-dark" style="margin-bottom:16px;">GET OUTSIDE</span>
+        <h2 style="font-size: clamp(2.2rem, 4.5vw, 4rem); color: #FFFFFF !important; margin-bottom: 16px; text-shadow: 0 4px 16px rgba(0,0,0,0.6);">YOUR NEXT ADVENTURE STARTS WITH WHAT YOU PACK.</h2>
+        <p style="max-width: 640px; margin-inline: auto; color: rgba(231,221,202,0.9); margin-bottom: var(--space-lg); font-size: 1.15rem; line-height: 1.6;">
+          Explore equipment, compare options, and find practical guidance before heading out to the trail.
+        </p>
+        <div style="display:flex; justify-content:center; gap: 16px; flex-wrap:wrap;">
+          <a href="products.html" class="btn btn-primary">EXPLORE THE COLLECTION →</a>
+          <button class="btn btn-outline-dark open-enquiry-btn">ASK ABOUT GEAR →</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Trailforge Home" style="margin-bottom: 16px; display: inline-flex;">
+            <svg class="brand-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 75L50 25L80 75H20Z" stroke="#D96B32" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M35 75L50 50L65 75H35Z" fill="#E7DDCA" opacity="0.3"/>
+              <circle cx="50" cy="50" r="40" stroke="#E7DDCA" stroke-width="3" stroke-dasharray="4 4" opacity="0.4"/>
+              <path d="M50 10V20M50 80V90M10 50H20M80 50H90" stroke="#D96B32" stroke-width="3"/>
+            </svg>
+            <div>
+              <span class="brand-title">TRAILFORGE</span>
+              <span class="brand-desc">OUTDOOR GEAR</span>
+            </div>
+          </a>
+          <p style="font-size: 0.92rem; color: rgba(231,221,202,0.75); margin-bottom: 14px; line-height: 1.5;">
+            Specialty outdoor and camping gear engineered for durability, utility, and field readiness.
+          </p>
+
+          <!-- Social Links with Hover Effects -->
+          <div class="footer-socials" aria-label="Social Media Links">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Strava Trails">
+              <svg viewBox="0 0 24 24"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7.92 15.598h4.173"/></svg>
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="home-2.html">Home 2 (Split View)</a>
+            <a href="about.html">About Trailforge</a>
+            <a href="products.html">Product Catalogue</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Adventure Links -->
+        <div>
+          <h4 class="footer-col-title">ADVENTURE</h4>
+          <div class="footer-links">
+            <a href="guides.html">Buying Guides</a>
+            <a href="rental.html">Gear Rental Program</a>
+            <a href="contact.html">Contact Headquarters</a>
+            <a href="#" class="open-enquiry-btn">Custom Loadouts</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Support Links -->
+        <div>
+          <h4 class="footer-col-title">SUPPORT</h4>
+          <div class="footer-links">
+            <a href="#" class="open-enquiry-btn">Gear Assistance</a>
+            <a href="rental.html">Rental Reservation</a>
+            <a href="guides.html">Camping Checklists</a>
+            <a href="contact.html">Store Location</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Field Notes Newsletter -->
+        <div>
+          <h4 class="footer-col-title">FIELD NOTES</h4>
+          <p style="font-size:0.9rem; color:rgba(231,221,202,0.7); margin-bottom:12px; line-height:1.4;">
+            Subscribe for gear maintenance tips, trail updates, and seasonal pack lists.
+          </p>
+          <div class="newsletter-box">
+            <div class="newsletter-input-wrap">
+              <input type="email" placeholder="Enter your email" class="newsletter-input" aria-label="Email Address">
+              <button class="btn btn-primary btn-sm" onclick="alert('Subscribed to Trailforge Field Notes!');">JOIN →</button>
+            </div>
+            <em style="font-size:0.75rem; color:rgba(231,221,202,0.45); display:block;">No spam. Unsubscribe anytime.</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Trailforge Outdoor Gear. All rights reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Trail</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       GLOBAL ENQUIRY POPUP MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="enquiry-modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close-btn" id="enquiry-close-btn" aria-label="Close Modal">✕</button>
+      
+      <div id="enquiry-form-container">
+        <span class="badge" style="margin-bottom:4px;">TRAILFORGE ASSISTANCE</span>
+        <h2 style="font-size:1.75rem; margin-bottom:12px;">LET'S TALK GEAR</h2>
+        
+        <div id="enquiry-success" style="display:none; background: var(--accent-alpha); border:1px solid var(--color-signal-orange); padding: 14px; text-align:center; margin-bottom:12px;">
+          <h3 style="color:var(--color-signal-orange); font-size:1.4rem; margin-bottom:4px;">ENQUIRY RECEIVED</h3>
+          <p style="margin:0; font-size:0.9rem;">Thanks — your enquiry has been prepared for the Trailforge team.</p>
+        </div>
+
+        <form id="enquiry-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-name">Full Name *</label>
+              <input type="text" id="enquiry-name" class="form-control" required placeholder="Alex Mercer">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-email">Email Address *</label>
+              <input type="email" id="enquiry-email" class="form-control" required placeholder="alex@example.com">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-phone">Phone Number</label>
+              <input type="tel" id="enquiry-phone" class="form-control" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-type">Enquiry Type</label>
+              <select id="enquiry-type" class="form-control">
+                <option value="Product Question">Product Question</option>
+                <option value="Gear Recommendation">Gear Recommendation</option>
+                <option value="Rental Enquiry">Rental Enquiry</option>
+                <option value="Buying Guide Help">Buying Guide Help</option>
+                <option value="General Enquiry">General Enquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-product">Product / Gear Selected</label>
+              <input type="text" id="enquiry-product" class="form-control" placeholder="Specific gear or leave blank">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-date">Preferred Trip Date</label>
+              <input type="date" id="enquiry-date" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="enquiry-trip">Trip Type</label>
+              <select id="enquiry-trip" class="form-control">
+                <option value="Weekend Camping">Weekend Camping</option>
+                <option value="Backpacking">Backpacking</option>
+                <option value="Hiking">Hiking</option>
+                <option value="Family Camping">Family Camping</option>
+                <option value="Road Trip">Road Trip</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enquiry-people">Number of People</label>
+              <select id="enquiry-people" class="form-control">
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3-4">3–4 People</option>
+                <option value="5+">5+ People</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="enquiry-message">Message *</label>
+            <textarea id="enquiry-message" class="form-control" rows="2" required placeholder="Tell us about your upcoming trip or gear questions..."></textarea>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn btn-outline" onclick="document.getElementById('enquiry-modal').classList.remove('open');">Maybe Later</button>
+            <button type="submit" class="btn btn-primary">SEND ENQUIRY →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL SEARCH MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="search-modal" aria-hidden="true">
+    <div class="modal-panel" style="max-width: 600px;">
+      <button class="modal-close-btn" id="search-close-btn" aria-label="Close Search">✕</button>
+      <span class="badge" style="margin-bottom:8px;">SEARCH CATALOGUE & GUIDES</span>
+      <h3 style="font-size:1.8rem; margin-bottom:16px;">FIND GEAR OR INFORMATION</h3>
+      
+      <div class="form-group">
+        <input type="text" id="search-input" class="form-control" placeholder="Type 'tent', 'backpack', 'sleeping', 'cookware'..." autofocus>
+      </div>
+
+      <div id="search-results" style="max-height: 350px; overflow-y: auto; margin-top: 16px;">
+        <p class="text-muted" style="padding:16px;">Type to search equipment or guides...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL PRODUCT DETAIL MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="product-detail-modal" aria-hidden="true">
+    <div class="modal-panel" style="max-width: 800px;">
+      <button class="modal-close-btn" id="product-detail-close" aria-label="Close Details">✕</button>
+      <div id="product-detail-body">
+        <!-- Dynamically injected via main.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
