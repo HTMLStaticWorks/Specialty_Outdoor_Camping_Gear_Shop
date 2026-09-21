@@ -9,6 +9,28 @@
   <meta property="og:description" content="Technical outdoor equipment designed for mountain exploration.">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Page-scoped: Ready for Trail CTA — theme-aware text contrast -->
+  <style>
+    /* Light mode: strong dark text on sandy beige */
+    [data-theme="light"] .ready-trail-cta .section-title {
+      color: #172019 !important;
+      font-weight: 800 !important;
+    }
+    [data-theme="light"] .ready-trail-cta .section-subtitle {
+      color: rgba(23, 32, 25, 0.92) !important;
+      font-weight: 500 !important;
+    }
+    /* Dark mode: bright sand/white text on dark background */
+    [data-theme="dark"] .ready-trail-cta .section-title {
+      color: #E7DDCA !important;
+      font-weight: 800 !important;
+    }
+    [data-theme="dark"] .ready-trail-cta .section-subtitle {
+      color: rgba(231, 221, 202, 0.92) !important;
+      font-weight: 500 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -369,7 +391,7 @@
     <!-- ==========================================================================
          HOME 2 — SECTION 06 — PREMIUM CTA
          ========================================================================== -->
-    <section class="section">
+    <section class="section ready-trail-cta">
       <div class="container scroll-reveal" style="text-align:center;">
         <span class="badge" style="margin-bottom:12px;">READY FOR THE TRAIL</span>
         <h2 class="section-title">READY TO GET OUT THERE?</h2>

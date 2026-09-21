@@ -794,26 +794,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 14. BACK TO TOP BUTTON
+  // 14. BACK TO TOP BUTTON — auto-injected on every page
   // ==========================================================================
-  const backToTopBtn = document.getElementById('back-to-top');
-  if (backToTopBtn) {
-    // Show/hide based on scroll position
-    const handleBackToTopVisibility = () => {
-      if (window.scrollY > 200) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    };
+  let backToTopBtn = document.getElementById('back-to-top');
 
-    window.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
-    handleBackToTopVisibility(); // Check on load
-
-    // Scroll to top on click
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  // Create the button if it doesn't exist in the HTML
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'back-to-top';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    backToTopBtn.innerHTML = `
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>`;
+    document.body.appendChild(backToTopBtn);
   }
+
+  // Show/hide based on scroll position
+  const handleBackToTopVisibility = () => {
+    if (window.scrollY > 200) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
+  handleBackToTopVisibility(); // Check on load
+
+  // Scroll to top on click
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
 

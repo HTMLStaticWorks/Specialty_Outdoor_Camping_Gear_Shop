@@ -34,6 +34,24 @@
         min-height: auto !important;
       }
     }
+
+    /* CTA (pre-footer) buttons — equal size on mobile & tablet */
+    @media (max-width: 834px) {
+      #cta-btn-group {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin-inline: auto !important;
+        gap: 12px !important;
+      }
+      #cta-btn-group .btn {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -402,7 +420,7 @@
         <p style="max-width: 640px; margin-inline: auto; color: rgba(231,221,202,0.9); margin-bottom: var(--space-lg); font-size: 1.15rem; line-height: 1.6;">
           Explore equipment, compare options, and find practical guidance before heading out to the trail.
         </p>
-        <div style="display:flex; justify-content:center; gap: 16px; flex-wrap:wrap;">
+        <div id="cta-btn-group" style="display:flex; justify-content:center; gap: 16px; flex-wrap:wrap;">
           <a href="products.html" class="btn btn-primary">EXPLORE THE COLLECTION →</a>
           <button class="btn btn-outline-dark open-enquiry-btn">ASK ABOUT GEAR →</button>
         </div>
