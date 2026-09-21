@@ -790,9 +790,28 @@ html[dir="rtl"] .drawer-panel {
   font-weight: bold;
 }
 
-@media (max-width: 834px) {
+/* Tablet 768px — two equal columns, 3rd card resets to same width */
+@media (min-width: 601px) and (max-width: 834px) {
+  .seasonal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Override the inline grid-column: 1 / -1 on the 3rd (cold-weather) card */
+  .seasonal-grid > .seasonal-card:last-child {
+    grid-column: 1 / -1 !important;
+  }
+  /* Keep all card heights equal using min-height */
+  .seasonal-card {
+    min-height: 360px;
+  }
+}
+
+/* Mobile — single column */
+@media (max-width: 600px) {
   .seasonal-grid {
     grid-template-columns: 1fr;
+  }
+  .seasonal-grid > .seasonal-card:last-child {
+    grid-column: auto !important;
   }
 }
 
@@ -1797,6 +1816,20 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   .hero-buttons .btn {
     margin-inline: auto !important;
     text-align: center !important;
+  }
+
+  /* 5b. Hero buttons — equal size on mobile */
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin-inline: auto !important;
+  }
+  .hero-buttons .btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
   }
 
   /* 6. Form Headers & Labels on Mobile */

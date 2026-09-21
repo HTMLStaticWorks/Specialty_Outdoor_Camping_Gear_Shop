@@ -10,6 +10,31 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Page-scoped fix: Seasonal cards equal size at tablet (768px) only -->
+  <style>
+    @media (min-width: 601px) and (max-width: 834px) {
+      /* Override the global flex !important that collapses the grid */
+      .section .seasonal-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        flex-direction: unset !important;
+        align-items: stretch !important;
+        gap: 24px !important;
+      }
+      /* All cards same height */
+      .section .seasonal-grid > .seasonal-card {
+        width: 100% !important;
+        min-height: 380px !important;
+        align-items: unset !important;
+      }
+      /* 3rd cold-weather card spans full width */
+      .section .seasonal-grid > .seasonal-card:last-child {
+        grid-column: 1 / -1 !important;
+        min-height: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -168,7 +193,7 @@
             <div>
               <span class="badge badge-dark" style="margin-bottom:12px;">POPULAR SEASON</span>
               <h3 class="seasonal-title">SUMMER CAMPS</h3>
-              <p>High ventilation shelters, camp kitchen setups, and sun defense.</p>
+              <p>High ventilation shelters, camp kitchen setups, and a super sun defense.</p>
               <ul class="seasonal-list">
                 <li>Ventilated mesh tents</li>
                 <li>Compact camp cookware</li>
