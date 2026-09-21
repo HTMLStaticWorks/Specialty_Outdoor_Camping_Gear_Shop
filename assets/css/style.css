@@ -59,15 +59,19 @@
 }
 
 /* Global High-Contrast Text Selection Styling (Light & Dark Theme) */
-::selection {
+::selection,
+*::selection {
   background-color: var(--color-signal-orange) !important;
   color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   text-shadow: none !important;
 }
 
-::-moz-selection {
+::-moz-selection,
+*::-moz-selection {
   background-color: var(--color-signal-orange) !important;
   color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   text-shadow: none !important;
 }
 
@@ -1135,11 +1139,15 @@ html[dir="rtl"] .cat-menu-item {
 /* Section 03: Trailhead to Campsite Journey */
 .journey-tabs {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   border-bottom: 2px solid var(--border-color);
   margin-bottom: var(--space-xl);
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
 }
 
 .journey-tabs::-webkit-scrollbar {
@@ -1157,8 +1165,14 @@ html[dir="rtl"] .cat-menu-item {
   color: var(--text-muted);
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
-  white-space: nowrap;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
   transition: all var(--transition-fast);
+  cursor: pointer;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 .journey-tab.active {
@@ -1173,9 +1187,47 @@ html[dir="rtl"] .cat-menu-item {
   align-items: center;
 }
 
+@media (max-width: 991px) {
+  .journey-tabs {
+    justify-content: space-around;
+    gap: 8px;
+  }
+
+  .journey-tab {
+    padding: 12px 14px !important;
+    font-size: 1.05rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   .journey-panel {
     grid-template-columns: 1fr;
+  }
+
+  .journey-tabs {
+    justify-content: space-between;
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+
+  .journey-tab {
+    padding: 10px 8px !important;
+    font-size: 0.88rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-tabs {
+    justify-content: flex-start;
+    gap: 12px;
+    padding-bottom: 6px;
+  }
+
+  .journey-tab {
+    padding: 8px 6px !important;
+    font-size: 0.82rem !important;
   }
 }
 
@@ -1396,14 +1448,14 @@ html[dir="rtl"] .cat-menu-item {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 3000;
-  background-color: rgba(14, 20, 16, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  z-index: 100000 !important;
+  background-color: rgba(14, 20, 16, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-sm);
+  padding: 16px;
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-smooth);
@@ -1416,14 +1468,16 @@ html[dir="rtl"] .cat-menu-item {
 
 .modal-panel {
   width: min(100% - 24px, 640px);
-  max-height: min(90vh, 680px);
+  max-height: min(85vh, 680px);
+  margin: auto;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.75);
   overflow-y: auto;
   padding: 24px 28px;
   position: relative;
+  z-index: 100001 !important;
   transform: translateY(20px) scale(0.97);
   transition: transform var(--transition-smooth);
 }
@@ -1650,6 +1704,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 
 .footer-social-link {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1950,15 +2005,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     margin-inline: 0 !important;
   }
 
-  /* Expert guidance section buttons — equal full width on mobile */
+  /* Expert guidance section buttons — equal full width on tablet (<= 1024px) & mobile */
   .expert-guidance-actions {
+    display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
     align-items: stretch !important;
+    gap: 12px !important;
   }
   .expert-guidance-actions .btn,
   .expert-guidance-actions a.btn {
     width: 100% !important;
+    flex: 1 1 100% !important;
     text-align: center !important;
     justify-content: center !important;
     box-sizing: border-box !important;
@@ -2098,6 +2156,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 /* Contact Page Social Buttons - High Visibility Circular Icon Badges */
 .contact-social-btn {
+  position: relative !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -2116,7 +2175,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   box-sizing: border-box !important;
 }
 
-.contact-social-btn svg {
+.contact-social-btn svg,
+.contact-social-btn svg path {
   width: 20px !important;
   height: 20px !important;
   min-width: 20px !important;
@@ -2136,9 +2196,62 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   box-shadow: 0 8px 24px rgba(217, 107, 50, 0.4) !important;
 }
 
-.contact-social-btn:hover svg {
+.contact-social-btn:hover svg,
+.contact-social-btn:hover svg path {
   fill: #ffffff !important;
   transform: scale(1.18) !important;
+}
+
+/* Tooltip Snippets on Hover for Contact & Footer Social Icons */
+.contact-social-btn::after,
+.footer-social-link::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: #172419;
+  color: #FFFFFF;
+  border: 1px solid var(--color-signal-orange);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-body, sans-serif);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.contact-social-btn::before,
+.footer-social-link::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  border-width: 6px 5px 0 5px;
+  border-style: solid;
+  border-color: var(--color-signal-orange) transparent transparent transparent;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+  z-index: 101;
+}
+
+.contact-social-btn:hover::after,
+.contact-social-btn:hover::before,
+.footer-social-link:hover::after,
+.footer-social-link:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* ==========================================================================
@@ -2494,9 +2607,42 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 /* --- 2. HOME-2.HTML (Home 2) — FOUR SEASONS CLIMATE MATRIX --- */
 .sec-weather-matrix {
-  background-color: var(--color-forest-black);
+  background-color: var(--color-forest-black) !important;
   padding-block: var(--space-3xl);
   position: relative;
+  color: var(--color-trail-sand) !important;
+}
+
+.sec-weather-matrix .section-title,
+.sec-weather-matrix h2 {
+  color: #FFFFFF !important;
+}
+
+.sec-weather-matrix .section-subtitle,
+.sec-weather-matrix p {
+  color: rgba(231, 221, 202, 0.85) !important;
+}
+
+.sec-weather-matrix .badge {
+  background: rgba(217, 107, 50, 0.18) !important;
+  color: var(--color-signal-orange) !important;
+  border: 1px solid var(--color-signal-orange) !important;
+}
+
+.sec-weather-matrix ::selection,
+.sec-weather-matrix *::selection {
+  background-color: var(--color-signal-orange) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: none !important;
+}
+
+.sec-weather-matrix ::-moz-selection,
+.sec-weather-matrix *::-moz-selection {
+  background-color: var(--color-signal-orange) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: none !important;
 }
 
 .season-grid {
@@ -2507,13 +2653,21 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 
 .season-card {
-  background-color: #1a241c;
-  border: 1px solid rgba(231, 221, 202, 0.15);
+  background-color: #1a241c !important;
+  border: 1px solid rgba(231, 221, 202, 0.15) !important;
   border-radius: 8px;
   padding: 24px;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.season-card h4 {
+  color: var(--color-trail-sand) !important;
+}
+
+.season-card p {
+  color: rgba(231, 221, 202, 0.78) !important;
 }
 
 .season-card::before {
@@ -3283,6 +3437,75 @@ input[type="date"].form-control {
 
   .quality-standards-img {
     max-height: 380px;
+  }
+}
+
+/* ==========================================================================
+   BUYING GUIDES PAGE - FEATURED GUIDE TABLET & MOBILE CENTERING
+   ========================================================================== */
+@media (max-width: 991px) {
+  .featured-guide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .featured-guide-content .badge {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  .featured-guide-content .section-title {
+    text-align: center !important;
+  }
+
+  .featured-guide-content p {
+    text-align: center !important;
+  }
+
+  .featured-guide-content .btn {
+    margin-inline: auto !important;
+    align-self: center !important;
+    display: inline-flex !important;
+  }
+}
+
+/* ==========================================================================
+   PRODUCTS PAGE - NOT SURE WHAT TO PACK SECTION EQUAL BUTTON SIZES
+   ========================================================================== */
+.expert-guidance-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.expert-guidance-actions .btn,
+.expert-guidance-actions a.btn {
+  flex: 1 1 200px;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .expert-guidance-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .expert-guidance-actions .btn,
+  .expert-guidance-actions a.btn {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    display: flex !important;
   }
 }
 
