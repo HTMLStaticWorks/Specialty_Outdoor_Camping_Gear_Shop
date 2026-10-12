@@ -169,8 +169,8 @@
       <img src="assets/images/1.png" alt="High mountain campsite overview at sunrise" class="hero-bg-img">
       <div class="hero-overlay"></div>
       <div class="container hero-content scroll-reveal">
-        <span class="badge" style="margin-bottom: 16px;">ENGINEERED OUTDOOR EQUIPMENT</span>
-        <h1 class="hero-title">GEAR FOR THE PLACES THAT CALL YOU OUTSIDE.</h1>
+        <span class="badge">ENGINEERED OUTDOOR EQUIPMENT</span>
+        <h1 class="hero-title">GEAR FOR THE PLACES<br>THAT CALL YOU<br>OUTSIDE.</h1>
         <p class="hero-lead">Purpose-built camping and outdoor essentials for weekends in the wild, long trail days and everything between.</p>
         <div class="hero-buttons">
           <a href="products.html" class="btn btn-primary">EXPLORE THE GEAR →</a>
@@ -280,7 +280,7 @@
           </div>
           <div class="scroll-reveal">
             <span class="badge">FIELD TESTED DESIGN</span>
-            <h2 class="section-title" style="margin-block: 12px;">BUILT FOR THE WEATHER YOU DIDN'T PLAN FOR.</h2>
+            <h2 class="section-title" style="margin-block: 12px; text-align: start;">BUILT FOR THE WEATHER YOU DIDN'T PLAN FOR.</h2>
             <p style="color: var(--text-secondary); margin-bottom: 20px;">
               True outdoor reliability is measured when cold fronts arrive early, rain saturates your pack cover, and the trail turns to rock. Every piece of equipment at Trailforge is selected for durability, field repairability, and practical function.
             </p>
@@ -524,7 +524,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Trailforge Outdoor Gear. All rights reserved.</div>
+        <div>© 2026 Trailforge. All rights reserved.</div>
         <div style="display:flex; gap:16px;">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Trail</a>
@@ -650,8 +650,14 @@
        GLOBAL PRODUCT DETAIL MODAL
        ========================================================================== -->
   <div class="modal-overlay" id="product-detail-modal" aria-hidden="true">
-    <div class="modal-panel" style="max-width: 800px;">
-      <button class="modal-close-btn" id="product-detail-close" aria-label="Close Details">✕</button>
+    <div class="modal-panel product-modal-panel">
+      <div class="product-modal-top-bar">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="badge" style="font-size:0.75rem;">TRAILFORGE LAB SPECIFICATIONS</span>
+          <span class="badge badge-dark" style="font-size:0.72rem;">FIELD VERIFIED</span>
+        </div>
+        <button class="modal-close-btn" id="product-detail-close" aria-label="Close Details">✕</button>
+      </div>
       <div id="product-detail-body">
         <!-- Dynamically injected via main.js -->
       </div>

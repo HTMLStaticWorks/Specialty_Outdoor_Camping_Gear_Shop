@@ -503,27 +503,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (productDetailBody) {
       productDetailBody.innerHTML = `
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch;">
+        <div class="product-detail-grid">
           <!-- Left Column: Full-Height Image & Feature Highlights -->
-          <div style="display:flex; flex-direction:column; justify-content:space-between; gap:16px; height:100%;">
-            <div style="position:relative; border-radius:8px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--shadow-md); height:100%; min-height:260px;">
-              <img src="${p.image}" alt="${p.name}" style="width:100%; height:100%; object-fit:cover; display:block;">
-              <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(23,32,25,0.85) 0%, transparent 55%);"></div>
+          <div class="product-detail-col-img">
+            <div class="product-modal-img-wrap">
+              <img src="${p.image}" alt="${p.name}" class="product-modal-img">
+              <div class="product-modal-img-overlay"></div>
               
               <!-- Badge over Image -->
-              <div style="position:absolute; top:12px; left:12px; background:var(--color-signal-orange); color:#FFF; font-family:var(--font-heading); font-size:0.75rem; font-weight:700; letter-spacing:1px; padding:4px 10px; border-radius:4px; text-transform:uppercase;">
+              <div class="product-modal-cert-badge">
                 TRAILFORGE LAB CERTIFIED
               </div>
 
               <!-- Bottom Overlay Bar on Image -->
-              <div style="position:absolute; bottom:12px; left:12px; right:12px; display:flex; justify-content:space-between; align-items:center; background:rgba(23,32,25,0.85); backdrop-filter:blur(6px); padding:8px 14px; border-radius:6px; border:1px solid rgba(231,221,202,0.15);">
+              <div class="product-modal-stat-bar">
                 <span style="font-size:0.8rem; color:#E7DDCA; font-weight:600;">100% Field-Tested Equipment</span>
                 <span style="font-size:0.8rem; color:var(--color-signal-orange); font-weight:700;">★ 4.9 Rating</span>
               </div>
             </div>
 
             <!-- Guarantee Badges (Fills vertical space under image) -->
-            <div style="background:var(--bg-primary); border:1px solid var(--border-color); border-radius:8px; padding:12px 14px; display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; text-align:center;">
+            <div class="product-modal-guarantee-grid">
               <div>
                 <strong style="display:block; font-size:0.72rem; color:var(--color-signal-orange); text-transform:uppercase; letter-spacing:0.5px;">WARRANTY</strong>
                 <span style="font-size:0.8rem; color:var(--text-secondary);">Lifetime</span>
@@ -540,39 +540,39 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <!-- Right Column: Specs & Technical Details -->
-          <div style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div class="product-detail-col-info">
             <div>
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
                 <span class="badge">${p.category}</span>
                 <span style="font-size:0.8rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">SKU: ${p.id.toUpperCase()}</span>
               </div>
 
-              <h2 style="font-size:1.7rem; margin-bottom:10px; line-height:1.15; color:var(--text-primary);">${p.name}</h2>
-              <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.5; margin-bottom:16px;">${p.details}</p>
+              <h2 class="product-modal-title">${p.name}</h2>
+              <p class="product-modal-desc">${p.details}</p>
 
               <!-- Structured Technical Specifications Grid -->
-              <div style="background:var(--bg-primary); padding:16px; border:1px solid var(--border-color); border-radius:8px; margin-bottom:20px; display:grid; grid-template-columns:1fr 1fr; gap:12px 16px;">
+              <div class="product-modal-specs-grid">
                 <div>
-                  <span style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; letter-spacing:0.5px;">Weight</span>
-                  <strong style="font-size:0.95rem; color:var(--text-primary);">${p.weight}</strong>
+                  <span class="spec-label">Weight</span>
+                  <strong class="spec-val">${p.weight}</strong>
                 </div>
                 <div>
-                  <span style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; letter-spacing:0.5px;">Capacity</span>
-                  <strong style="font-size:0.95rem; color:var(--text-primary);">${p.capacity}</strong>
+                  <span class="spec-label">Capacity</span>
+                  <strong class="spec-val">${p.capacity}</strong>
                 </div>
                 <div>
-                  <span style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; letter-spacing:0.5px;">Material</span>
-                  <strong style="font-size:0.95rem; color:var(--text-primary);">${p.material}</strong>
+                  <span class="spec-label">Material</span>
+                  <strong class="spec-val">${p.material}</strong>
                 </div>
                 <div>
-                  <span style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; letter-spacing:0.5px;">Ideal Use</span>
-                  <strong style="font-size:0.95rem; color:var(--text-primary);">${p.use}</strong>
+                  <span class="spec-label">Ideal Use</span>
+                  <strong class="spec-val">${p.use}</strong>
                 </div>
               </div>
             </div>
 
             <!-- Action Buttons Row -->
-            <div style="display:flex; gap:12px;">
+            <div style="display:flex; gap:12px; margin-top:16px;">
               <button class="btn btn-primary open-enquiry-btn" data-product-name="${p.name}" style="flex:1; text-align:center; justify-content:center;">ENQUIRE ABOUT THIS GEAR →</button>
             </div>
           </div>
@@ -582,6 +582,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     productDetailModal.classList.add('open');
     productDetailModal.setAttribute('aria-hidden', 'false');
+    const panel = productDetailModal.querySelector('.modal-panel');
+    if (panel) panel.scrollTop = 0;
     document.body.style.overflow = 'hidden';
   }
 
@@ -607,6 +609,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === productDetailModal) closeProductDetailModal();
     });
   }
+
+  // Close modals on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeProductDetailModal();
+      if (typeof closeEnquiryModal === 'function') closeEnquiryModal();
+      if (typeof closeSearchModal === 'function') closeSearchModal();
+    }
+  });
 
   // ==========================================================================
   // 08. HOME 1 CATEGORY NAVIGATOR

@@ -17,7 +17,10 @@
     <div class="container navbar-inner">
       <a href="index.html" class="brand-logo" aria-label="Trailforge Home">
         <svg class="brand-logo-icon" viewBox="0 0 100 100" fill="none"><path d="M20 75L50 25L80 75H20Z" stroke="#D96B32" stroke-width="6"/><path d="M35 75L50 50L65 75H35Z" fill="#E7DDCA" opacity="0.3"/><circle cx="50" cy="50" r="40" stroke="#E7DDCA" stroke-width="3" stroke-dasharray="4 4" opacity="0.4"/><path d="M50 10V20M50 80V90M10 50H20M80 50H90" stroke="#D96B32" stroke-width="3"/></svg>
-        <div><span class="brand-title">TRAILFORGE</span><span class="brand-desc">OUTDOOR GEAR</span></div>
+        <div>
+          <span class="brand-title">TRAILFORGE</span>
+          <span class="brand-desc">OUTDOOR GEAR</span>
+        </div>
       </a>
       <nav class="nav-menu" aria-label="Main Navigation">
         <a href="index.html" class="nav-link">Home</a>
@@ -400,7 +403,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Trailforge Outdoor Gear. All rights reserved.</div>
+        <div>© 2026 Trailforge. All rights reserved.</div>
         <div style="display:flex; gap:16px;">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Trail</a>
@@ -503,8 +506,14 @@
   </div>
 
   <div class="modal-overlay" id="product-detail-modal" aria-hidden="true">
-    <div class="modal-panel" style="max-width: 800px;">
-      <button class="modal-close-btn" id="product-detail-close">✕</button>
+    <div class="modal-panel product-modal-panel">
+      <div class="product-modal-top-bar">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="badge" style="font-size:0.75rem;">TRAILFORGE LAB SPECIFICATIONS</span>
+          <span class="badge badge-dark" style="font-size:0.72rem;">FIELD VERIFIED</span>
+        </div>
+        <button class="modal-close-btn" id="product-detail-close" aria-label="Close product details">✕</button>
+      </div>
       <div id="product-detail-body"></div>
     </div>
   </div>
