@@ -201,6 +201,11 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.classList.add('open');
       mobileDrawer.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      if (hamburgerBtn) {
+        hamburgerBtn.classList.add('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'true');
+        hamburgerBtn.setAttribute('aria-label', 'Close Mobile Navigation Menu');
+      }
     }
   }
 
@@ -209,10 +214,27 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.classList.remove('open');
       mobileDrawer.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      if (hamburgerBtn) {
+        hamburgerBtn.classList.remove('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        hamburgerBtn.setAttribute('aria-label', 'Open Mobile Navigation Menu');
+      }
     }
   }
 
-  if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
+  function toggleDrawer(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (mobileDrawer && mobileDrawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }
+
+  if (hamburgerBtn) hamburgerBtn.addEventListener('click', toggleDrawer);
   if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
 
   if (mobileDrawer) {
@@ -223,6 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.drawer-nav .nav-link').forEach(link => {
     link.addEventListener('click', closeDrawer);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024 && mobileDrawer && mobileDrawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('open')) {
+      closeDrawer();
+    }
   });
 
   // Highlight active nav link based on window location
@@ -297,6 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openEnquiryModal(productName = '') {
     if (enquiryModal) {
+      if (mobileDrawer && mobileDrawer.classList.contains('open')) {
+        closeDrawer();
+      }
       if (enquiryProductInput && productName) {
         enquiryProductInput.value = productName;
       }
@@ -377,6 +414,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openSearchModal() {
     if (searchModal) {
+      if (mobileDrawer && mobileDrawer.classList.contains('open')) {
+        closeDrawer();
+      }
       searchModal.classList.add('open');
       searchModal.setAttribute('aria-hidden', 'false');
       if (searchInput) searchInput.focus();

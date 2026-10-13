@@ -557,6 +557,19 @@ ul {
   transition: all var(--transition-fast);
 }
 
+.hamburger-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Mobile Navigation Drawer */
 .mobile-drawer {
   position: fixed;
@@ -656,14 +669,17 @@ html[dir="rtl"] .drawer-panel {
   letter-spacing: 0.05em;
 }
 
-/* Mobile breakpoint for navbar */
+/* Mobile breakpoint for navbar (mobile & tablet <= 1024px) */
 @media (max-width: 1024px) {
   .nav-menu {
     display: none;
   }
 
-  .nav-actions .desktop-only-action {
-    display: none;
+  .nav-actions .desktop-only-action,
+  .nav-actions .rtl-toggle-btn,
+  .nav-actions .open-enquiry-btn,
+  .nav-actions .btn {
+    display: none !important;
   }
 
   .hamburger-btn {
@@ -3571,6 +3587,7 @@ input[type="date"].form-control {
     padding: 10px 16px;
     font-size: 0.85rem;
     border-radius: 20px;
+    white-space: nowrap;
   }
 
   .planner-btn:hover,
@@ -3579,13 +3596,37 @@ input[type="date"].form-control {
   }
 }
 
-@media (max-width: 576px) {
+/* MOBILE RESPONSIVE LAYOUT (<= 767px and 360px) — Stack Menu One By One */
+@media (max-width: 767px) {
   .planner-tabs {
-    justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 6px;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    overflow-x: visible !important;
+    width: 100% !important;
+    gap: 10px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .planner-btn {
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 12px 16px !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+  }
+
+  .planner-btn:hover,
+  .planner-btn.active {
+    transform: none !important;
   }
 
   .planner-footer-row {
@@ -3597,6 +3638,16 @@ input[type="date"].form-control {
   .planner-footer-row .btn {
     width: 100% !important;
     justify-content: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .planner-display {
+    padding: 20px 16px !important;
+  }
+
+  #planner-title {
+    font-size: 1.5rem !important;
   }
 }
 
@@ -3718,6 +3769,103 @@ input[type="date"].form-control {
     justify-content: center !important;
     box-sizing: border-box !important;
     display: flex !important;
+  }
+}
+
+/* Expert Guidance Visual Badges Responsive Alignment */
+.expert-active-badge {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  background: var(--bg-dark-surface);
+  color: var(--text-on-dark);
+  border: 1px solid var(--border-dark-color);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-md);
+  z-index: 3;
+}
+
+.expert-bottom-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(23, 32, 25, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(231, 221, 202, 0.2);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.expert-bottom-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.expert-rating-pill {
+  background: var(--color-signal-orange);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .expert-guidance-card {
+    padding: var(--space-lg) var(--space-sm) !important;
+  }
+
+  .expert-active-badge {
+    top: 14px !important;
+    left: 14px !important;
+    padding: 7px 12px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .expert-bottom-badge {
+    bottom: 12px !important;
+    left: 12px !important;
+    right: 12px !important;
+    padding: 10px 12px !important;
+    gap: 8px !important;
+  }
+
+  .expert-bottom-text span {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .expert-bottom-text strong {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+    display: block !important;
+    word-break: break-word !important;
+  }
+
+  .expert-rating-pill {
+    font-size: 0.95rem !important;
+    padding: 4px 8px !important;
   }
 }
 
